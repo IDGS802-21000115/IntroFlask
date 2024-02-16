@@ -11,7 +11,7 @@ def alumnos():
     apaterno=""
     correo=""
     alum_form=forms.UserForm(request.form)
-    if request.method == "POST":
+    if request.method == "POST" and alum_form.validate():
         nom = alum_form.nombre.data
         correo = alum_form.email.data
         apaterno = alum_form.apaterno.data
